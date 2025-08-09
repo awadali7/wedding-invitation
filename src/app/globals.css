@@ -1,26 +1,275 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Color Variables - Primary */
+    --primary-burgundy: #722f37;
+    --primary-deep-burgundy: #5a1f25;
+    --primary-light-burgundy: #8b3a42;
+
+    /* Color Variables - Secondary */
+    --secondary-cream: #f5f1e8;
+    --secondary-warm-white: #fefcf7;
+    --secondary-champagne: #f7e7ce;
+
+    /* Color Variables - Accent */
+    --accent-gold: #d4af37;
+    --accent-rose-gold: #e8b4b8;
+    --accent-copper: #b87333;
+
+    /* Color Variables - Neutral */
+    --neutral-dark-brown: #3e2723;
+    --neutral-light-gray: #f5f5f5;
+    --neutral-medium-gray: #757575;
+
+    /* Color Variables - Floral */
+    --floral-dusty-rose: #d4a5a5;
+    --floral-mauve: #c8a2c8;
+    --floral-sage: #9caf88;
+
+    /* Typography Variables */
+    --font-elegant: "Playfair Display", serif;
+    --font-script: "Great Vibes", cursive;
+    --font-body: "Source Sans Pro", sans-serif;
+    --font-accent: "Cormorant Garamond", serif;
+
+    /* Fallback Fonts */
+    --font-fallback-serif: Georgia, "Times New Roman", serif;
+    --font-fallback-sans: Arial, sans-serif;
+    --font-fallback-cursive: "Brush Script MT", cursive;
+
+    /* Background and Foreground */
+    --background: var(--secondary-warm-white);
+    --foreground: var(--neutral-dark-brown);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-body);
+    --font-serif: var(--font-elegant);
+    --font-cursive: var(--font-script);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+/* Typography Classes */
+.font-elegant {
+    font-family: var(--font-elegant);
+}
+
+.font-script {
+    font-family: var(--font-script);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-accent {
+    font-family: var(--font-accent);
+}
+
+/* Color Classes - Text */
+.text-burgundy {
+    color: var(--primary-burgundy);
+}
+
+.text-deep-burgundy {
+    color: var(--primary-deep-burgundy);
+}
+
+.text-light-burgundy {
+    color: var(--primary-light-burgundy);
+}
+
+.text-cream {
+    color: var(--secondary-cream);
+}
+
+.text-warm-white {
+    color: var(--secondary-warm-white);
+}
+
+.text-champagne {
+    color: var(--secondary-champagne);
+}
+
+.text-gold {
+    color: var(--accent-gold);
+}
+
+.text-rose-gold {
+    color: var(--accent-rose-gold);
+}
+
+.text-copper {
+    color: var(--accent-copper);
+}
+
+.text-dark-brown {
+    color: var(--neutral-dark-brown);
+}
+
+.text-light-gray {
+    color: var(--neutral-light-gray);
+}
+
+.text-medium-gray {
+    color: var(--neutral-medium-gray);
+}
+
+.text-dusty-rose {
+    color: var(--floral-dusty-rose);
+}
+
+.text-mauve {
+    color: var(--floral-mauve);
+}
+
+.text-sage {
+    color: var(--floral-sage);
+}
+
+/* Color Classes - Background */
+.bg-burgundy {
+    background-color: var(--primary-burgundy);
+}
+
+.bg-deep-burgundy {
+    background-color: var(--primary-deep-burgundy);
+}
+
+.bg-light-burgundy {
+    background-color: var(--primary-light-burgundy);
+}
+
+.bg-cream {
+    background-color: var(--secondary-cream);
+}
+
+.bg-warm-white {
+    background-color: var(--secondary-warm-white);
+}
+
+.bg-champagne {
+    background-color: var(--secondary-champagne);
+}
+
+.bg-gold {
+    background-color: var(--accent-gold);
+}
+
+.bg-rose-gold {
+    background-color: var(--accent-rose-gold);
+}
+
+.bg-copper {
+    background-color: var(--accent-copper);
+}
+
+.bg-dark-brown {
+    background-color: var(--neutral-dark-brown);
+}
+
+.bg-light-gray {
+    background-color: var(--neutral-light-gray);
+}
+
+.bg-medium-gray {
+    background-color: var(--neutral-medium-gray);
+}
+
+.bg-dusty-rose {
+    background-color: var(--floral-dusty-rose);
+}
+
+.bg-mauve {
+    background-color: var(--floral-mauve);
+}
+
+.bg-sage {
+    background-color: var(--floral-sage);
+}
+
+/* Gradient Classes */
+.bg-primary-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--primary-burgundy) 0%,
+        var(--primary-deep-burgundy) 100%
+    );
+}
+
+.bg-accent-gradient {
+    background: linear-gradient(
+        45deg,
+        var(--accent-gold) 0%,
+        var(--accent-rose-gold) 100%
+    );
+}
+
+.bg-background-gradient {
+    background: linear-gradient(
+        180deg,
+        var(--secondary-warm-white) 0%,
+        var(--secondary-cream) 100%
+    );
+}
+
+/* Design Element Classes */
+.card-elegant {
+    background: var(--secondary-warm-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--secondary-cream);
+}
+
+.border-gold {
+    border-color: var(--accent-gold);
+}
+
+.border-burgundy {
+    border-color: var(--primary-burgundy);
+}
+
+.border-cream {
+    border-color: var(--secondary-cream);
+}
+
+/* Spacing and Layout */
+.spacing-generous {
+    padding: 2rem;
+    margin: 1.5rem 0;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-burgundy: #5a1f25;
+        --neutral-dark-brown: #1a1a1a;
+    }
 }

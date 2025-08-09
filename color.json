@@ -1,0 +1,118 @@
+{
+    "colorTheme": {
+        "name": "Elegant Burgundy Romance",
+        "description": "A luxurious color palette inspired by deep burgundy and warm cream tones with metallic accents",
+        "colors": {
+            "primary": {
+                "burgundy": "#722F37",
+                "deepBurgundy": "#5A1F25",
+                "lightBurgundy": "#8B3A42"
+            },
+            "secondary": {
+                "cream": "#F5F1E8",
+                "warmWhite": "#FEFCF7",
+                "champagne": "#F7E7CE"
+            },
+            "accent": {
+                "gold": "#D4AF37",
+                "roseGold": "#E8B4B8",
+                "copper": "#B87333"
+            },
+            "neutral": {
+                "darkBrown": "#3E2723",
+                "lightGray": "#F5F5F5",
+                "mediumGray": "#757575"
+            },
+            "floral": {
+                "dustyRose": "#D4A5A5",
+                "mauve": "#C8A2C8",
+                "sage": "#9CAF88"
+            }
+        },
+        "gradients": {
+            "primaryGradient": "linear-gradient(135deg, #722F37 0%, #5A1F25 100%)",
+            "accentGradient": "linear-gradient(45deg, #D4AF37 0%, #E8B4B8 100%)",
+            "backgroundGradient": "linear-gradient(180deg, #FEFCF7 0%, #F5F1E8 100%)"
+        }
+    },
+    "typography": {
+        "primaryFonts": {
+            "elegant": {
+                "name": "Playfair Display",
+                "category": "serif",
+                "weights": ["400", "500", "600", "700"],
+                "usage": "Headings, couple names, main titles",
+                "googleFonts": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+            },
+            "script": {
+                "name": "Great Vibes",
+                "category": "cursive",
+                "weights": ["400"],
+                "usage": "Elegant script text, romantic quotes, decorative elements",
+                "googleFonts": "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            }
+        },
+        "secondaryFonts": {
+            "body": {
+                "name": "Source Sans Pro",
+                "category": "sans-serif",
+                "weights": ["300", "400", "600"],
+                "usage": "Body text, details, venue information",
+                "googleFonts": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+            },
+            "accent": {
+                "name": "Cormorant Garamond",
+                "category": "serif",
+                "weights": ["300", "400", "500"],
+                "usage": "Dates, formal details, secondary headings",
+                "googleFonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap"
+            }
+        },
+        "fallbackFonts": {
+            "serif": "Georgia, 'Times New Roman', serif",
+            "sansSerif": "Arial, sans-serif",
+            "cursive": "'Brush Script MT', cursive"
+        }
+    },
+    "designElements": {
+        "decorative": {
+            "flowerAccents": "Small botanical elements in dusty rose and sage",
+            "goldAccents": "Metallic gold dividers and borders",
+            "ribbonElements": "Elegant ribbon graphics in burgundy"
+        },
+        "layout": {
+            "cardStyle": "Elegant card-based design with subtle shadows",
+            "spacing": "Generous white space for premium feel",
+            "borders": "Subtle gold or burgundy accent borders"
+        }
+    },
+    "recommendations": {
+        "usage": {
+            "headers": "Use Playfair Display in burgundy (#722F37) for main headings",
+            "coupleNames": "Use Great Vibes in gold (#D4AF37) for romantic emphasis",
+            "bodyText": "Use Source Sans Pro in dark brown (#3E2723) for readability",
+            "dates": "Use Cormorant Garamond in burgundy for formal elegance",
+            "background": "Use cream to warm white gradient for sophistication"
+        },
+        "accessibility": {
+            "contrast": "Ensure 4.5:1 contrast ratio for body text",
+            "fontSizes": "Minimum 16px for body text, scalable design",
+            "colorBlind": "High contrast between burgundy and cream ensures visibility"
+        }
+    },
+    "cssVariables": {
+        ":root": {
+            "--primary-burgundy": "#722F37",
+            "--primary-deep-burgundy": "#5A1F25",
+            "--secondary-cream": "#F5F1E8",
+            "--accent-gold": "#D4AF37",
+            "--accent-rose-gold": "#E8B4B8",
+            "--neutral-dark": "#3E2723",
+            "--floral-dusty-rose": "#D4A5A5",
+            "--font-elegant": "'Playfair Display', serif",
+            "--font-script": "'Great Vibes', cursive",
+            "--font-body": "'Source Sans Pro', sans-serif",
+            "--font-accent": "'Cormorant Garamond', serif"
+        }
+    }
+}

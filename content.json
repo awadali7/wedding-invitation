@@ -1,0 +1,181 @@
+{
+    "weddingDetails": {
+        "coupleInformation": {
+            "groom": {
+                "name": "Dr. Ansheef Ali",
+                "fullName": "Dr. Ansheef Ali",
+                "title": "Dr.",
+                "firstName": "Ansheef",
+                "lastName": "Ali",
+                "qualification": "PhD, ICAR-ARS scientist",
+                "profession": "Agricultural Research Scientist",
+                "father": {
+                    "name": "Basheer TP",
+                    "relationship": "S/o"
+                },
+                "mother": {
+                    "name": "Rasiya Basheer"
+                },
+                "address": {
+                    "houseName": "Thoppasseri House",
+                    "area": "Chevayur",
+                    "city": "Kozhikode",
+                    "pincode": "673017",
+                    "state": "Kerala",
+                    "country": "India",
+                    "fullAddress": "Thoppasseri House, Chevayur, Kozhikode, Kerala 673017"
+                }
+            },
+            "bride": {
+                "name": "Ms. Abeer Ali",
+                "fullName": "Ms. Abeer Ali",
+                "title": "Ms.",
+                "firstName": "Abeer",
+                "lastName": "Ali",
+                "qualification": "PhD Scholar",
+                "profession": "Agricultural Officer",
+                "father": {
+                    "name": "Alikunju KP",
+                    "relationship": "D/o"
+                },
+                "mother": {
+                    "name": "Sunimol Alikunju"
+                },
+                "address": {
+                    "houseName": "Kotteparambil House",
+                    "area": "Pezhakkappilly",
+                    "postOffice": "Muvattupuzha",
+                    "district": "Ernakulam",
+                    "state": "Kerala",
+                    "pincode": "686673",
+                    "country": "India",
+                    "fullAddress": "Kotteparambil House, Pezhakkappilly PO, Muvattupuzha, Ernakulam, Kerala 686673"
+                }
+            }
+        },
+        "weddingParty": {
+            "bestComplements": [
+                {
+                    "name": "Afna",
+                    "role": "Best Complement"
+                },
+                {
+                    "name": "Aliya",
+                    "role": "Best Complement"
+                },
+                {
+                    "name": "Awad",
+                    "role": "Best Complement"
+                }
+            ]
+        },
+        "venue": {
+            "name": "Mela Auditorium, Muvattupuzha",
+            "shortName": "Mela Auditorium",
+            "type": "Auditorium",
+            "address": {
+                "street": "Velloorkunnam",
+                "postOffice": "Market P. O.",
+                "city": "Muvattupuzha",
+                "state": "Kerala",
+                "pincode": "686673",
+                "country": "India",
+                "fullAddress": "Velloorkunnam, Market P. O., Muvattupuzha, Kerala 686673"
+            },
+            "coordinates": {
+                "latitude": 9.989592599999998,
+                "longitude": 76.577944
+            },
+            "mapEmbed": {
+                "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.4929455917995!2d76.577944!3d9.989592599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e763e0fdd2d7%3A0x362ac96a515d7d86!2sMela%20Auditorium%2C%20Muvattupuzha!5e1!3m2!1sen!2sin!4v1754724325873!5m2!1sen!2sin",
+                "width": 600,
+                "height": 450,
+                "allowFullscreen": true,
+                "loading": "lazy"
+            },
+            "directionsUrl": "https://maps.google.com/?q=Mela+Auditorium+Muvattupuzha+Velloorkunnam+Market+PO+Kerala+686673"
+        },
+        "eventDetails": {
+            "weddingDate": {
+                "placeholder": "To be updated",
+                "dateFormat": "YYYY-MM-DD"
+            },
+            "weddingTime": {
+                "placeholder": "To be updated",
+                "timeFormat": "HH:MM AM/PM"
+            },
+            "ceremonies": [
+                {
+                    "name": "Wedding Ceremony",
+                    "venue": "Mela Auditorium, Muvattupuzha",
+                    "date": "TBD",
+                    "time": "TBD"
+                }
+            ]
+        },
+        "contactInformation": {
+            "groom": {
+                "phone": "TBD",
+                "email": "TBD"
+            },
+            "bride": {
+                "phone": "TBD",
+                "email": "TBD"
+            },
+            "families": {
+                "groomFamily": {
+                    "contact": "TBD"
+                },
+                "brideFamily": {
+                    "contact": "TBD"
+                }
+            }
+        },
+        "additionalDetails": {
+            "dresscode": {
+                "suggested": "Traditional/Formal attire",
+                "colors": ["Burgundy", "Cream", "Gold", "Rose Gold"]
+            },
+            "rsvp": {
+                "required": true,
+                "deadline": "TBD",
+                "contactMethod": "Phone/Email"
+            },
+            "parking": {
+                "available": true,
+                "details": "Parking available at venue"
+            },
+            "accommodation": {
+                "suggestions": [
+                    {
+                        "type": "Hotels near Muvattupuzha",
+                        "distance": "Within 5km radius"
+                    }
+                ]
+            }
+        },
+        "culturalContext": {
+            "region": "Kerala",
+            "traditions": [
+                "Islamic wedding customs",
+                "Malayalam cultural elements"
+            ],
+            "languages": ["Malayalam", "English", "Arabic"]
+        },
+        "websiteMetadata": {
+            "title": "Dr. Ansheef Ali & Ms. Abeer Ali - Wedding Invitation",
+            "description": "Join us in celebrating the wedding of Dr. Ansheef Ali and Ms. Abeer Ali at Mela Auditorium, Muvattupuzha",
+            "keywords": [
+                "wedding",
+                "invitation",
+                "Ansheef Ali",
+                "Abeer Ali",
+                "Muvattupuzha",
+                "Kerala",
+                "wedding ceremony"
+            ],
+            "author": "Wedding Invitation Website",
+            "locale": "en_IN"
+        }
+    }
+}

@@ -1,103 +1,359 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    return (
+        <div className="min-h-screen bg-background-gradient">
+            {/* Header */}
+            <header className="bg-primary-gradient text-white py-12 px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h1 className="font-elegant text-4xl md:text-6xl font-bold mb-4">
+                        Wedding Invitation
+                    </h1>
+                    <div className="font-script text-3xl md:text-5xl text-gold mb-4">
+                        Dr. Ansheef Ali
+                    </div>
+                    <div className="font-elegant text-2xl md:text-3xl mb-2">
+                        &
+                    </div>
+                    <div className="font-script text-3xl md:text-5xl text-gold mb-4">
+                        Ms. Abeer Ali
+                    </div>
+                    <p className="font-accent text-xl opacity-90">
+                        Request the pleasure of your company at their wedding
+                        ceremony
+                    </p>
+                </div>
+            </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Main Content */}
+            <main className="max-w-6xl mx-auto px-6 py-12">
+                {/* Couple Information */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        The Couple
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Groom */}
+                        <div className="card-elegant p-8 text-center">
+                            <h3 className="font-elegant text-2xl text-burgundy mb-4">
+                                The Groom
+                            </h3>
+                            <div className="font-script text-3xl text-gold mb-2">
+                                Dr. Ansheef Ali
+                            </div>
+                            <p className="font-accent text-lg text-burgundy mb-2">
+                                PhD, ICAR-ARS scientist
+                            </p>
+                            <p className="font-body text-dark-brown mb-4">
+                                Agricultural Research Scientist
+                            </p>
+                            <div className="text-left">
+                                <p className="font-body text-dark-brown">
+                                    <span className="font-accent text-burgundy">
+                                        Son of:
+                                    </span>{" "}
+                                    Basheer TP & Rasiya Basheer
+                                </p>
+                                <p className="font-body text-dark-brown mt-2">
+                                    <span className="font-accent text-burgundy">
+                                        Address:
+                                    </span>
+                                    <br />
+                                    Thoppasseri House, Chevayur,
+                                    <br />
+                                    Kozhikode, Kerala 673017
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Bride */}
+                        <div className="card-elegant p-8 text-center">
+                            <h3 className="font-elegant text-2xl text-burgundy mb-4">
+                                The Bride
+                            </h3>
+                            <div className="font-script text-3xl text-gold mb-2">
+                                Ms. Abeer Ali
+                            </div>
+                            <p className="font-accent text-lg text-burgundy mb-2">
+                                PhD Scholar
+                            </p>
+                            <p className="font-body text-dark-brown mb-4">
+                                Agricultural Officer
+                            </p>
+                            <div className="text-left">
+                                <p className="font-body text-dark-brown">
+                                    <span className="font-accent text-burgundy">
+                                        Daughter of:
+                                    </span>{" "}
+                                    Alikunju KP & Sunimol Alikunju
+                                </p>
+                                <p className="font-body text-dark-brown mt-2">
+                                    <span className="font-accent text-burgundy">
+                                        Address:
+                                    </span>
+                                    <br />
+                                    Kotteparambil House, Pezhakkappilly PO,
+                                    <br />
+                                    Muvattupuzha, Ernakulam, Kerala 686673
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Wedding Details */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Wedding Details
+                    </h2>
+
+                    <div className="card-elegant p-8 text-center">
+                        <div className="font-script text-4xl text-gold mb-4">
+                            Wedding Ceremony
+                        </div>
+                        <div className="font-accent text-2xl text-burgundy mb-2">
+                            Date: To be updated
+                        </div>
+                        <div className="font-accent text-2xl text-burgundy mb-6">
+                            Time: To be updated
+                        </div>
+
+                        <div className="bg-primary-gradient text-white p-6 rounded-lg">
+                            <h3 className="font-elegant text-2xl mb-2">
+                                Venue
+                            </h3>
+                            <div className="font-accent text-xl mb-2">
+                                Mela Auditorium, Muvattupuzha
+                            </div>
+                            <p className="font-body">
+                                Velloorkunnam, Market P. O.,
+                                <br />
+                                Muvattupuzha, Kerala 686673
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Venue Map */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Venue Location
+                    </h2>
+
+                    <div className="card-elegant p-8">
+                        <div className="aspect-video rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.4929455917995!2d76.577944!3d9.989592599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e763e0fdd2d7%3A0x362ac96a515d7d86!2sMela%20Auditorium%2C%20Muvattupuzha!5e1!3m2!1sen!2sin!4v1754724325873!5m2!1sen!2sin"
+                                width="100%"
+                                height="450"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Mela Auditorium, Muvattupuzha"
+                            ></iframe>
+                        </div>
+                        <div className="text-center mt-4">
+                            <a
+                                href="https://maps.google.com/?q=Mela+Auditorium+Muvattupuzha+Velloorkunnam+Market+PO+Kerala+686673"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-gold text-white px-6 py-3 rounded-lg font-body hover:bg-rose-gold transition-colors"
+                            >
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Wedding Party */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Wedding Party
+                    </h2>
+
+                    <div className="card-elegant p-8">
+                        <h3 className="font-elegant text-2xl text-burgundy mb-6 text-center">
+                            Best Complements
+                        </h3>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="text-center">
+                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
+                                    <div className="font-script text-2xl mb-2">
+                                        Afna
+                                    </div>
+                                    <div className="font-accent">
+                                        Best Complement
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-center">
+                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
+                                    <div className="font-script text-2xl mb-2">
+                                        Aliya
+                                    </div>
+                                    <div className="font-accent">
+                                        Best Complement
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-center">
+                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
+                                    <div className="font-script text-2xl mb-2">
+                                        Awad
+                                    </div>
+                                    <div className="font-accent">
+                                        Best Complement
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Additional Information */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Additional Information
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Dress Code */}
+                        <div className="card-elegant p-8">
+                            <h3 className="font-elegant text-xl text-burgundy mb-4">
+                                Dress Code
+                            </h3>
+                            <p className="font-body text-dark-brown mb-4">
+                                Traditional/Formal attire
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                <span className="bg-burgundy text-white px-3 py-1 rounded-full text-sm">
+                                    Burgundy
+                                </span>
+                                <span className="bg-cream text-dark-brown px-3 py-1 rounded-full text-sm border border-burgundy">
+                                    Cream
+                                </span>
+                                <span className="bg-gold text-white px-3 py-1 rounded-full text-sm">
+                                    Gold
+                                </span>
+                                <span className="bg-rose-gold text-white px-3 py-1 rounded-full text-sm">
+                                    Rose Gold
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Parking & Accommodation */}
+                        <div className="card-elegant p-8">
+                            <h3 className="font-elegant text-xl text-burgundy mb-4">
+                                Venue Information
+                            </h3>
+                            <div className="space-y-3">
+                                <div>
+                                    <span className="font-accent text-burgundy">
+                                        Parking:
+                                    </span>
+                                    <span className="font-body text-dark-brown ml-2">
+                                        Available at venue
+                                    </span>
+                                </div>
+                                <div>
+                                    <span className="font-accent text-burgundy">
+                                        Accommodation:
+                                    </span>
+                                    <span className="font-body text-dark-brown ml-2">
+                                        Hotels near Muvattupuzha (Within 5km
+                                        radius)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* RSVP Section */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        RSVP
+                    </h2>
+
+                    <div className="card-elegant p-8 text-center">
+                        <p className="font-body text-lg text-dark-brown mb-6">
+                            Please confirm your attendance by contacting us
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 className="font-elegant text-xl text-burgundy mb-2">
+                                    Groom's Family
+                                </h4>
+                                <p className="font-body text-dark-brown">
+                                    Contact: TBD
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className="font-elegant text-xl text-burgundy mb-2">
+                                    Bride's Family
+                                </h4>
+                                <p className="font-body text-dark-brown">
+                                    Contact: TBD
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Cultural Context */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Cultural Traditions
+                    </h2>
+
+                    <div className="card-elegant p-8">
+                        <div className="grid md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <h3 className="font-elegant text-xl text-burgundy mb-2">
+                                    Region
+                                </h3>
+                                <p className="font-body text-dark-brown">
+                                    Kerala
+                                </p>
+                            </div>
+                            <div>
+                                <h3 className="font-elegant text-xl text-burgundy mb-2">
+                                    Traditions
+                                </h3>
+                                <ul className="font-body text-dark-brown space-y-1">
+                                    <li>Islamic wedding customs</li>
+                                    <li>Malayalam cultural elements</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="font-elegant text-xl text-burgundy mb-2">
+                                    Languages
+                                </h3>
+                                <ul className="font-body text-dark-brown space-y-1">
+                                    <li>Malayalam</li>
+                                    <li>English</li>
+                                    <li>Arabic</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            {/* Footer */}
+            <footer className="bg-primary-gradient text-white py-8 px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                    <p className="font-accent text-lg">
+                        Dr. Ansheef Ali & Ms. Abeer Ali
+                    </p>
+                    <p className="font-body text-sm opacity-80 mt-2">
+                        Wedding Invitation • Mela Auditorium, Muvattupuzha,
+                        Kerala
+                    </p>
+                </div>
+            </footer>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
