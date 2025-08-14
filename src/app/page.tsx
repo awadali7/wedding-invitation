@@ -284,7 +284,7 @@ export default function Home() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 className="font-elegant text-xl text-burgundy mb-2">
-                                    Groom's Family
+                                    Groom&apos;s Family
                                 </h4>
                                 <p className="font-body text-dark-brown">
                                     Contact: TBD
@@ -292,7 +292,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h4 className="font-elegant text-xl text-burgundy mb-2">
-                                    Bride's Family
+                                    Bride&apos;s Family
                                 </h4>
                                 <p className="font-body text-dark-brown">
                                     Contact: TBD
