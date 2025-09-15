@@ -1,13 +1,10 @@
-import ButterflyAnimation from '../components/ButterflyAnimation';
+import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-background-gradient relative">
-            {/* Butterfly Animation */}
-            <ButterflyAnimation />
-            
+        <div className="min-h-screen bg-background-gradient">
             {/* Header */}
-            <header className="bg-primary-gradient text-white py-12 px-6 relative z-20">
+            <header className="bg-primary-gradient text-white py-12 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="font-elegant text-4xl md:text-6xl font-bold mb-4">
                         Wedding Invitation
@@ -29,7 +26,7 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <main className="max-w-6xl mx-auto px-6 py-12 relative z-20">
+            <main className="max-w-6xl mx-auto px-6 py-12">
                 {/* Couple Information */}
                 <section className="mb-16">
                     <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
@@ -47,6 +44,9 @@ export default function Home() {
                             </div>
                             <p className="font-accent text-lg text-burgundy mb-2">
                                 PhD, ICAR-ARS scientist
+                            </p>
+                            <p className="font-body text-dark-brown mb-4">
+                                Agricultural Research Scientist
                             </p>
                             <div className="text-left">
                                 <p className="font-body text-dark-brown">
@@ -77,6 +77,9 @@ export default function Home() {
                             </div>
                             <p className="font-accent text-lg text-burgundy mb-2">
                                 PhD Scholar
+                            </p>
+                            <p className="font-body text-dark-brown mb-4">
+                                Agricultural Officer
                             </p>
                             <div className="text-left">
                                 <p className="font-body text-dark-brown">
@@ -110,10 +113,10 @@ export default function Home() {
                             Wedding Ceremony
                         </div>
                         <div className="font-accent text-2xl text-burgundy mb-2">
-                            Date: 21st September 2025
+                            Date: To be updated
                         </div>
                         <div className="font-accent text-2xl text-burgundy mb-6">
-                            Time: 11:30 AM
+                            Time: To be updated
                         </div>
 
                         <div className="bg-primary-gradient text-white p-6 rounded-lg">
@@ -126,7 +129,7 @@ export default function Home() {
                             <p className="font-body">
                                 Velloorkunnam, Market P. O.,
                                 <br />
-                                Mela Auditorium, Muvattupuzha, Kerala 686673
+                                Muvattupuzha, Kerala 686673
                             </p>
                         </div>
                     </div>
@@ -174,7 +177,17 @@ export default function Home() {
                         <h3 className="font-elegant text-2xl text-burgundy mb-6 text-center">
                             Best Complements
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-3 gap-6">
+                            {/* <div className="text-center">
+                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
+                                    <div className="font-script text-2xl mb-2">
+                                        Afna
+                                    </div>
+                                    <div className="font-accent">
+                                        Best Complement
+                                    </div>
+                                </div>
+                            </div> */}
                             <div className="text-center">
                                 <div className="bg-accent-gradient text-white p-4 rounded-lg">
                                     <div className="font-script text-2xl mb-2">
@@ -194,6 +207,96 @@ export default function Home() {
                                         Best Complement
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Additional Information */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        Additional Information
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Dress Code */}
+                        <div className="card-elegant p-8">
+                            <h3 className="font-elegant text-xl text-burgundy mb-4">
+                                Dress Code
+                            </h3>
+                            <p className="font-body text-dark-brown mb-4">
+                                Traditional/Formal attire
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                <span className="bg-burgundy text-white px-3 py-1 rounded-full text-sm">
+                                    Burgundy
+                                </span>
+                                <span className="bg-cream text-dark-brown px-3 py-1 rounded-full text-sm border border-burgundy">
+                                    Cream
+                                </span>
+                                <span className="bg-gold text-white px-3 py-1 rounded-full text-sm">
+                                    Gold
+                                </span>
+                                <span className="bg-rose-gold text-white px-3 py-1 rounded-full text-sm">
+                                    Rose Gold
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Parking & Accommodation */}
+                        <div className="card-elegant p-8">
+                            <h3 className="font-elegant text-xl text-burgundy mb-4">
+                                Venue Information
+                            </h3>
+                            <div className="space-y-3">
+                                <div>
+                                    <span className="font-accent text-burgundy">
+                                        Parking:
+                                    </span>
+                                    <span className="font-body text-dark-brown ml-2">
+                                        Available at venue
+                                    </span>
+                                </div>
+                                <div>
+                                    <span className="font-accent text-burgundy">
+                                        Accommodation:
+                                    </span>
+                                    <span className="font-body text-dark-brown ml-2">
+                                        Hotels near Muvattupuzha (Within 5km
+                                        radius)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* RSVP Section */}
+                <section className="mb-16">
+                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                        RSVP
+                    </h2>
+
+                    <div className="card-elegant p-8 text-center">
+                        <p className="font-body text-lg text-dark-brown mb-6">
+                            Please confirm your attendance by contacting us
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 className="font-elegant text-xl text-burgundy mb-2">
+                                    Groom&apos;s Family
+                                </h4>
+                                <p className="font-body text-dark-brown">
+                                    Contact: TBD
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className="font-elegant text-xl text-burgundy mb-2">
+                                    Bride&apos;s Family
+                                </h4>
+                                <p className="font-body text-dark-brown">
+                                    Contact: TBD
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -224,13 +327,23 @@ export default function Home() {
                                     <li>Malayalam cultural elements</li>
                                 </ul>
                             </div>
+                            {/* <div>
+                                <h3 className="font-elegant text-xl text-burgundy mb-2">
+                                    Languages
+                                </h3>
+                                <ul className="font-body text-dark-brown space-y-1">
+                                    <li>Malayalam</li>
+                                    <li>English</li>
+                                    <li>Arabic</li>
+                                </ul>
+                            </div> */}
                         </div>
                     </div>
                 </section>
             </main>
 
             {/* Footer */}
-            <footer className="bg-primary-gradient text-white py-8 px-6 relative z-20">
+            <footer className="bg-primary-gradient text-white py-8 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <p className="font-accent text-lg">
                         Dr. Ansheef Ali & Ms. Abeer Ali
