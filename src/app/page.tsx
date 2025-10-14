@@ -5,6 +5,7 @@ const { weddingDetails } = contentData;
 const {
     coupleInformation,
     venue,
+    fridayVenue,
     eventDetails,
     weddingParty,
     culturalContext,
@@ -127,94 +128,83 @@ export default function Home() {
                         Wedding Details
                     </h2>
 
-                    <div className="card-elegant p-8 text-center">
-                        <div className="font-script text-4xl text-gold mb-4">
-                            {eventDetails.ceremonies[0].name}
-                        </div>
-                        <div className="font-accent text-2xl text-burgundy mb-2">
-                            Date: {eventDetails.ceremonies[0].date}
-                        </div>
-                        <div className="font-accent text-2xl text-burgundy mb-2">
-                            Time: {eventDetails.ceremonies[0].time}
-                        </div>
-                        {culturalContext.islamicDate && (
-                            <div className="font-accent text-lg text-burgundy mb-6 opacity-80">
-                                {culturalContext.islamicDate}
-                            </div>
-                        )}
+                    <div className="space-y-8">
+                        {eventDetails.ceremonies.map((ceremony, index) => {
+                            const ceremonyVenue =
+                                ceremony.venueType === "fridayVenue"
+                                    ? fridayVenue
+                                    : venue;
+                            return (
+                                <div
+                                    key={index}
+                                    className="card-elegant p-8 text-center"
+                                >
+                                    <div className="font-script text-4xl text-gold mb-4">
+                                        {ceremony.name}
+                                    </div>
+                                    <div className="font-accent text-2xl text-burgundy mb-2">
+                                        {ceremony.date}
+                                    </div>
+                                    <div className="font-accent text-2xl text-burgundy mb-2">
+                                        {ceremony.time}
+                                    </div>
+                                    {index === 1 &&
+                                        culturalContext.islamicDate && (
+                                            <div className="font-accent text-lg text-burgundy mb-6 opacity-80">
+                                                {culturalContext.islamicDate}
+                                            </div>
+                                        )}
 
-                        <div className="bg-primary-gradient text-white p-6 rounded-lg mb-6">
-                            <h3 className="font-elegant text-2xl mb-2">
-                                Venue
-                            </h3>
-                            <div className="font-accent text-xl mb-2">
-                                {venue.shortName}
-                            </div>
-                            <p className="font-body">
-                                {venue.address.fullAddress}
-                            </p>
-                        </div>
+                                    <div className="bg-primary-gradient text-white p-6 rounded-lg mt-6">
+                                        <h3 className="font-elegant text-2xl mb-2">
+                                            Venue
+                                        </h3>
+                                        <div className="font-accent text-xl mb-2">
+                                            {ceremonyVenue.shortName}
+                                        </div>
+                                        <p className="font-body">
+                                            {ceremonyVenue.address.fullAddress}
+                                        </p>
+                                    </div>
 
-                        {eventDetails.ceremonies.length > 1 && (
-                            <div className="bg-accent-gradient text-white p-6 rounded-lg">
-                                <div className="font-script text-2xl mb-2">
-                                    {eventDetails.ceremonies[1].name}
+                                    {ceremonyVenue.mapEmbed &&
+                                        ceremony.name !== "Lunch" && (
+                                            <div className="mt-6">
+                                                <div className="aspect-video rounded-lg overflow-hidden">
+                                                    <iframe
+                                                        src={
+                                                            ceremonyVenue.mapEmbed
+                                                        }
+                                                        width="100%"
+                                                        height="450"
+                                                        style={{ border: 0 }}
+                                                        allowFullScreen
+                                                        loading="lazy"
+                                                        referrerPolicy="no-referrer-when-downgrade"
+                                                        title={
+                                                            ceremonyVenue.name
+                                                        }
+                                                    ></iframe>
+                                                </div>
+                                                <div className="text-center mt-4">
+                                                    <a
+                                                        href={`https://maps.google.com/?q=${encodeURIComponent(
+                                                            ceremonyVenue
+                                                                .address
+                                                                .fullAddress
+                                                        )}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-block bg-gold text-white px-6 py-3 rounded-lg font-body hover:bg-rose-gold transition-colors"
+                                                    >
+                                                        Get Directions
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        )}
                                 </div>
-                                <div className="font-accent">
-                                    {eventDetails.ceremonies[1].time}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </section>
-
-                {/* Venue Map */}
-                <section className="mb-16">
-                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
-                        Venue Location
-                    </h2>
-
-                    <div className="card-elegant p-8 text-center">
-                        {venue.mapEmbed ? (
-                            <>
-                                <div className="aspect-video rounded-lg overflow-hidden">
-                                    <iframe
-                                        src={venue.mapEmbed}
-                                        width="100%"
-                                        height="450"
-                                        style={{ border: 0 }}
-                                        allowFullScreen
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        title={venue.name}
-                                    ></iframe>
-                                </div>
-                                <div className="text-center mt-4">
-                                    <a
-                                        href={`https://maps.google.com/?q=${encodeURIComponent(
-                                            venue.address.fullAddress
-                                        )}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-gold text-white px-6 py-3 rounded-lg font-body hover:bg-rose-gold transition-colors"
-                                    >
-                                        Get Directions
-                                    </a>
-                                </div>
-                            </>
-                        ) : (
-                            <div className="p-8">
-                                <div className="font-script text-3xl text-gold mb-4">
-                                    {venue.name}
-                                </div>
-                                <p className="font-body text-dark-brown mb-4">
-                                    {venue.address.fullAddress}
-                                </p>
-                                <div className="font-accent text-xl text-burgundy">
-                                    {venue.directionsUrl}
-                                </div>
-                            </div>
-                        )}
+                            );
+                        })}
                     </div>
                 </section>
 

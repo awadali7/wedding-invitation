@@ -83,6 +83,26 @@
             "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.533536539108!2d76.2194432!3d10.1372149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081a8167970399%3A0x90ebc15ab1f8501a!2sKavitha%20Event%20Hub.!5e0!3m2!1sen!2sin!4v1760434356031!5m2!1sen!2sin",
             "directionsUrl": null
         },
+        "fridayVenue": {
+            "name": "Blue Waters Event Hub",
+            "shortName": "Blue Waters Event Hub",
+            "type": "Event Hub",
+            "address": {
+                "street": null,
+                "postOffice": null,
+                "city": null,
+                "state": null,
+                "pincode": null,
+                "country": null,
+                "fullAddress": "Blue Waters Event Hub"
+            },
+            "coordinates": {
+                "latitude": 10.1609982,
+                "longitude": 76.2618202
+            },
+            "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.241703632495!2d76.2618202!3d10.1609982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081b5454602113%3A0x7b866a02aab59ccd!2sBlue%20Waters%20Event%20Hub!5e0!3m2!1sen!2sin!4v1760435205049!5m2!1sen!2sin",
+            "directionsUrl": null
+        },
         "eventDetails": {
             "weddingDate": {
                 "placeholder": "2025-10-19",
@@ -95,16 +115,25 @@
             },
             "ceremonies": [
                 {
+                    "name": "Friday Program",
+                    "venue": "Blue Waters Event Hub",
+                    "date": "Friday, October 17, 2025",
+                    "time": "7:00 pm to 10:00 pm",
+                    "venueType": "fridayVenue"
+                },
+                {
                     "name": "Nikkah",
                     "venue": "Kavitha Event Hub, Perumpadanna, North Paravur",
                     "date": "Sunday, October 19, 2025",
-                    "time": "11:30 am"
+                    "time": "11:30 am",
+                    "venueType": "venue"
                 },
                 {
                     "name": "Lunch",
                     "venue": "Kavitha Event Hub, Perumpadanna, North Paravur",
                     "date": "Sunday, October 19, 2025",
-                    "time": "Thereafter"
+                    "time": "Thereafter",
+                    "venueType": "venue"
                 }
             ]
         },
