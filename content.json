@@ -2,114 +2,109 @@
     "weddingDetails": {
         "coupleInformation": {
             "groom": {
-                "name": "Dr. Ansheef Ali",
-                "fullName": "Dr. Ansheef Ali",
-                "title": "Dr.",
-                "firstName": "Ansheef",
-                "lastName": "Ali",
-                "qualification": "PhD, ICAR-ARS scientist",
-                "profession": "Agricultural Research Scientist",
+                "name": "Fahad Shafeer",
+                "fullName": "Fahad Shafeer",
+                "title": null,
+                "firstName": "Fahad",
+                "lastName": "Shafeer",
+                "qualification": null,
+                "profession": null,
                 "father": {
-                    "name": "Basheer TP",
-                    "relationship": "S/o"
+                    "name": "Shafeer",
+                    "relationship": "son"
                 },
                 "mother": {
-                    "name": "Rasiya Basheer"
+                    "name": "Shameena Shafeer"
                 },
                 "address": {
-                    "houseName": "Thoppasseri House",
-                    "area": "Chevayur",
-                    "city": "Kozhikode",
-                    "pincode": "673017",
-                    "state": "Kerala",
-                    "country": "India",
-                    "fullAddress": "Thoppasseri House, Chevayur, Kozhikode, Kerala 673017"
+                    "houseName": "Kariyampilly, Malikaveettil",
+                    "area": "Manjaly",
+                    "city": "North Paravur",
+                    "postOffice": "Mannam P O",
+                    "pincode": null,
+                    "state": null,
+                    "country": null,
+                    "fullAddress": "Kariyampilly, Malikaveettil, Manjaly, Mannam P O, North Paravur"
                 }
             },
             "bride": {
-                "name": "Ms. Abeer Ali",
-                "fullName": "Ms. Abeer Ali",
-                "title": "Ms.",
-                "firstName": "Abeer",
-                "lastName": "Ali",
-                "qualification": "PhD Scholar",
-                "profession": "Agricultural Officer",
+                "name": "Afiya Yakoob",
+                "fullName": "Afiya Yakoob",
+                "title": null,
+                "firstName": "Afiya",
+                "lastName": "Yakoob",
+                "qualification": null,
+                "profession": null,
                 "father": {
-                    "name": "Alikunju KP",
+                    "name": "Yakoob",
                     "relationship": "D/o"
                 },
                 "mother": {
-                    "name": "Sunimol Alikunju"
+                    "name": "Ameera Yakoob"
                 },
                 "address": {
-                    "houseName": "Kotteparambil House",
-                    "area": "Pezhakkappilly",
-                    "postOffice": "Muvattupuzha",
-                    "district": "Ernakulam",
-                    "state": "Kerala",
-                    "pincode": "686673",
-                    "country": "India",
-                    "fullAddress": "Kotteparambil House, Pezhakkappilly PO, Muvattupuzha, Ernakulam, Kerala 686673"
+                    "houseName": "Plachottil House",
+                    "area": "Edavanakad",
+                    "city": null,
+                    "postOffice": null,
+                    "district": null,
+                    "state": null,
+                    "pincode": null,
+                    "country": null,
+                    "fullAddress": "Plachottil House, Edavanakad"
                 }
             }
         },
         "weddingParty": {
             "bestComplements": [
                 {
-                    "name": "Afna",
-                    "role": "Best Complement"
-                },
-                {
-                    "name": "Aliya",
-                    "role": "Best Complement"
-                },
-                {
-                    "name": "Awad",
-                    "role": "Best Complement"
+                    "name": "Azed Shafeer & Videotec U C College, Aluva",
+                    "role": "With best compliments from"
                 }
             ]
         },
         "venue": {
-            "name": "Mela Auditorium, Muvattupuzha",
-            "shortName": "Mela Auditorium",
-            "type": "Auditorium",
+            "name": "Kavitha Event Hub, Perumpadanna, North Paravur",
+            "shortName": "Kavitha Event Hub",
+            "type": "Event Hub",
             "address": {
-                "street": "Velloorkunnam",
-                "postOffice": "Market P. O.",
-                "city": "Muvattupuzha",
-                "state": "Kerala",
-                "pincode": "686673",
-                "country": "India",
-                "fullAddress": "Velloorkunnam, Market P. O., Muvattupuzha, Kerala 686673"
+                "street": "Perumpadanna",
+                "postOffice": null,
+                "city": "North Paravur",
+                "state": null,
+                "pincode": null,
+                "country": null,
+                "fullAddress": "Kavitha Event Hub, Perumpadanna, North Paravur"
             },
             "coordinates": {
-                "latitude": 9.989592599999998,
-                "longitude": 76.577944
+                "latitude": null,
+                "longitude": null
             },
-            "mapEmbed": {
-                "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.4929455917995!2d76.577944!3d9.989592599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e763e0fdd2d7%3A0x362ac96a515d7d86!2sMela%20Auditorium%2C%20Muvattupuzha!5e1!3m2!1sen!2sin!4v1754724325873!5m2!1sen!2sin",
-                "width": 600,
-                "height": 450,
-                "allowFullscreen": true,
-                "loading": "lazy"
-            },
-            "directionsUrl": "https://maps.google.com/?q=Mela+Auditorium+Muvattupuzha+Velloorkunnam+Market+PO+Kerala+686673"
+            "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.533536539108!2d76.2194432!3d10.1372149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081a8167970399%3A0x90ebc15ab1f8501a!2sKavitha%20Event%20Hub.!5e0!3m2!1sen!2sin!4v1760434356031!5m2!1sen!2sin",
+            "directionsUrl": null
         },
         "eventDetails": {
             "weddingDate": {
-                "placeholder": "To be updated",
-                "dateFormat": "YYYY-MM-DD"
+                "placeholder": "2025-10-19",
+                "dateFormat": "YYYY-MM-DD",
+                "dayOfWeek": "Sunday"
             },
             "weddingTime": {
-                "placeholder": "To be updated",
+                "placeholder": "11:30 AM",
                 "timeFormat": "HH:MM AM/PM"
             },
             "ceremonies": [
                 {
-                    "name": "Wedding Ceremony",
-                    "venue": "Mela Auditorium, Muvattupuzha",
-                    "date": "TBD",
-                    "time": "TBD"
+                    "name": "Nikkah",
+                    "venue": "Kavitha Event Hub, Perumpadanna, North Paravur",
+                    "date": "Sunday, October 19, 2025",
+                    "time": "11:30 am"
+                },
+                {
+                    "name": "Lunch",
+                    "venue": "Kavitha Event Hub, Perumpadanna, North Paravur",
+                    "date": "Sunday, October 19, 2025",
+                    "time": "Thereafter"
                 }
             ]
         },
@@ -134,24 +129,19 @@
         "additionalDetails": {
             "dresscode": {
                 "suggested": "Traditional/Formal attire",
-                "colors": ["Burgundy", "Cream", "Gold", "Rose Gold"]
+                "colors": null
             },
             "rsvp": {
-                "required": true,
-                "deadline": "TBD",
-                "contactMethod": "Phone/Email"
+                "required": false,
+                "deadline": null,
+                "contactMethod": null
             },
             "parking": {
-                "available": true,
-                "details": "Parking available at venue"
+                "available": null,
+                "details": null
             },
             "accommodation": {
-                "suggestions": [
-                    {
-                        "type": "Hotels near Muvattupuzha",
-                        "distance": "Within 5km radius"
-                    }
-                ]
+                "suggestions": null
             }
         },
         "culturalContext": {
@@ -160,19 +150,20 @@
                 "Islamic wedding customs",
                 "Malayalam cultural elements"
             ],
-            "languages": ["Malayalam", "English", "Arabic"]
+            "languages": ["Malayalam", "English", "Arabic"],
+            "islamicDate": "1447 Rabi-ul-Akhir 27"
         },
         "websiteMetadata": {
-            "title": "Dr. Ansheef Ali & Ms. Abeer Ali - Wedding Invitation",
-            "description": "Join us in celebrating the wedding of Dr. Ansheef Ali and Ms. Abeer Ali at Mela Auditorium, Muvattupuzha",
+            "title": "Fahad Shafeer & Afiya Yakoob - Wedding Invitation",
+            "description": "Join us in celebrating the wedding of Fahad Shafeer and Afiya Yakoob on Sunday, October 19, 2025.",
             "keywords": [
                 "wedding",
                 "invitation",
-                "Ansheef Ali",
-                "Abeer Ali",
-                "Muvattupuzha",
+                "Fahad Shafeer",
+                "Afiya Yakoob",
+                "North Paravur",
                 "Kerala",
-                "wedding ceremony"
+                "Nikkah"
             ],
             "author": "Wedding Invitation Website",
             "locale": "en_IN"

@@ -51,6 +51,7 @@ export default function RootLayout({
                 className={`${playfairDisplay.variable} ${sourceSansPro.variable} ${cormorantGaramond.variable} antialiased`}
             >
                 {children}
+                weee
             </body>
         </html>
     );
