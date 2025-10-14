@@ -1,10 +1,22 @@
 import ButterflyAnimation from "../components/ButterflyAnimation";
+import contentData from "../../content.json";
+
+const { weddingDetails } = contentData;
+const {
+    coupleInformation,
+    venue,
+    eventDetails,
+    weddingParty,
+    culturalContext,
+} = weddingDetails;
+import ButterflyAnimation from "../components/ButterflyAnimation";
 
 export default function Home() {
     return (
         <div className="min-h-screen bg-background-gradient relative">
             {/* Butterfly Animation */}
             <ButterflyAnimation />
+
 
             {/* Header */}
             <header className="bg-primary-gradient text-white py-12 px-6 relative z-20">
@@ -13,13 +25,13 @@ export default function Home() {
                         Wedding Invitation
                     </h1>
                     <div className="font-script text-3xl md:text-5xl text-gold mb-4">
-                        Dr. Ansheef Ali
+                        {coupleInformation.groom.fullName}
                     </div>
                     <div className="font-elegant text-2xl md:text-3xl mb-2">
                         &
                     </div>
                     <div className="font-script text-3xl md:text-5xl text-gold mb-4">
-                        Ms. Abeer Ali
+                        {coupleInformation.bride.fullName}
                     </div>
                     <p className="font-accent text-xl opacity-90">
                         Request the pleasure of your company at their wedding
@@ -43,26 +55,32 @@ export default function Home() {
                                 The Groom
                             </h3>
                             <div className="font-script text-3xl text-gold mb-2">
-                                Dr. Ansheef Ali
+                                {coupleInformation.groom.fullName}
                             </div>
-                            <p className="font-accent text-lg text-burgundy mb-2">
-                                PhD, ICAR-ARS scientist
-                            </p>
+                            {coupleInformation.groom.qualification && (
+                                <p className="font-accent text-lg text-burgundy mb-2">
+                                    {coupleInformation.groom.qualification}
+                                    {coupleInformation.groom.profession &&
+                                        `, ${coupleInformation.groom.profession}`}
+                                </p>
+                            )}
                             <div className="text-left">
                                 <p className="font-body text-dark-brown">
                                     <span className="font-accent text-burgundy">
                                         Son of:
                                     </span>{" "}
-                                    Basheer TP & Rasiya Basheer
+                                    {coupleInformation.groom.father.name} &{" "}
+                                    {coupleInformation.groom.mother.name}
                                 </p>
                                 <p className="font-body text-dark-brown mt-2">
                                     <span className="font-accent text-burgundy">
                                         Address:
                                     </span>
                                     <br />
-                                    Thoppasseri House, Chevayur,
-                                    <br />
-                                    Kozhikode, Kerala 673017
+                                    {
+                                        coupleInformation.groom.address
+                                            .fullAddress
+                                    }
                                 </p>
                             </div>
                         </div>
@@ -73,26 +91,32 @@ export default function Home() {
                                 The Bride
                             </h3>
                             <div className="font-script text-3xl text-gold mb-2">
-                                Ms. Abeer Ali
+                                {coupleInformation.bride.fullName}
                             </div>
-                            <p className="font-accent text-lg text-burgundy mb-2">
-                                PhD Scholar
-                            </p>
+                            {coupleInformation.bride.qualification && (
+                                <p className="font-accent text-lg text-burgundy mb-2">
+                                    {coupleInformation.bride.qualification}
+                                    {coupleInformation.bride.profession &&
+                                        `, ${coupleInformation.bride.profession}`}
+                                </p>
+                            )}
                             <div className="text-left">
                                 <p className="font-body text-dark-brown">
                                     <span className="font-accent text-burgundy">
                                         Daughter of:
                                     </span>{" "}
-                                    Alikunju KP & Sunimol Alikunju
+                                    {coupleInformation.bride.father.name} &{" "}
+                                    {coupleInformation.bride.mother.name}
                                 </p>
                                 <p className="font-body text-dark-brown mt-2">
                                     <span className="font-accent text-burgundy">
                                         Address:
                                     </span>
                                     <br />
-                                    Kotteparambil House, Pezhakkappilly PO,
-                                    <br />
-                                    Muvattupuzha, Ernakulam, Kerala 686673
+                                    {
+                                        coupleInformation.bride.address
+                                            .fullAddress
+                                    }
                                 </p>
                             </div>
                         </div>
@@ -105,6 +129,21 @@ export default function Home() {
                         Wedding Details
                     </h2>
 
+                    <div className="card-elegant p-8 text-center">
+                        <div className="font-script text-4xl text-gold mb-4">
+                            {eventDetails.ceremonies[0].name}
+                        </div>
+                        <div className="font-accent text-2xl text-burgundy mb-2">
+                            Date: {eventDetails.ceremonies[0].date}
+                        </div>
+                        <div className="font-accent text-2xl text-burgundy mb-2">
+                            Time: {eventDetails.ceremonies[0].time}
+                        </div>
+                        {culturalContext.islamicDate && (
+                            <div className="font-accent text-lg text-burgundy mb-6 opacity-80">
+                                {culturalContext.islamicDate}
+                            </div>
+                        )}
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Friday Event */}
                         <div className="card-elegant p-8 text-center">
@@ -141,6 +180,16 @@ export default function Home() {
                                 Time: 11:30 AM
                             </div>
 
+                        <div className="bg-primary-gradient text-white p-6 rounded-lg mb-6">
+                            <h3 className="font-elegant text-2xl mb-2">
+                                Venue
+                            </h3>
+                            <div className="font-accent text-xl mb-2">
+                                {venue.shortName}
+                            </div>
+                            <p className="font-body">
+                                {venue.address.fullAddress}
+                            </p>
                             <div className="bg-primary-gradient text-white p-6 rounded-lg">
                                 <h3 className="font-elegant text-2xl mb-2">
                                     Venue
@@ -155,6 +204,17 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+
+                        {eventDetails.ceremonies.length > 1 && (
+                            <div className="bg-accent-gradient text-white p-6 rounded-lg">
+                                <div className="font-script text-2xl mb-2">
+                                    {eventDetails.ceremonies[1].name}
+                                </div>
+                                <div className="font-accent">
+                                    {eventDetails.ceremonies[1].time}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </section>
 
@@ -164,6 +224,47 @@ export default function Home() {
                         Venue Locations
                     </h2>
 
+                    <div className="card-elegant p-8 text-center">
+                        {venue.mapEmbed ? (
+                            <>
+                                <div className="aspect-video rounded-lg overflow-hidden">
+                                    <iframe
+                                        src={venue.mapEmbed}
+                                        width="100%"
+                                        height="450"
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title={venue.name}
+                                    ></iframe>
+                                </div>
+                                <div className="text-center mt-4">
+                                    <a
+                                        href={`https://maps.google.com/?q=${encodeURIComponent(
+                                            venue.address.fullAddress
+                                        )}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block bg-gold text-white px-6 py-3 rounded-lg font-body hover:bg-rose-gold transition-colors"
+                                    >
+                                        Get Directions
+                                    </a>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="p-8">
+                                <div className="font-script text-3xl text-gold mb-4">
+                                    {venue.name}
+                                </div>
+                                <p className="font-body text-dark-brown mb-4">
+                                    {venue.address.fullAddress}
+                                </p>
+                                <div className="font-accent text-xl text-burgundy">
+                                    {venue.directionsUrl}
+                                </div>
+                            </div>
+                        )}
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Friday Venue Map */}
                         <div className="card-elegant p-8">
@@ -226,39 +327,34 @@ export default function Home() {
                 </section>
 
                 {/* Wedding Party */}
-                <section className="mb-16">
-                    <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
-                        Wedding Party
-                    </h2>
+                {weddingParty.bestComplements &&
+                    weddingParty.bestComplements.length > 0 && (
+                        <section className="mb-16">
+                            <h2 className="font-elegant text-3xl text-burgundy mb-8 text-center">
+                                Wedding Party
+                            </h2>
 
-                    <div className="card-elegant p-8">
-                        <h3 className="font-elegant text-2xl text-burgundy mb-6 text-center">
-                            Best Complements
-                        </h3>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="text-center">
-                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
-                                    <div className="font-script text-2xl mb-2">
-                                        Aliya
-                                    </div>
-                                    <div className="font-accent">
-                                        Best Complement
-                                    </div>
-                                </div>
+                            <div className="card-elegant p-8">
+                                {weddingParty.bestComplements.map(
+                                    (complement, index) => (
+                                        <div
+                                            key={index}
+                                            className="text-center mb-6 last:mb-0"
+                                        >
+                                            <div className="bg-accent-gradient text-white p-6 rounded-lg">
+                                                <div className="font-accent text-lg mb-2">
+                                                    {complement.role}
+                                                </div>
+                                                <div className="font-script text-2xl">
+                                                    {complement.name}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
                             </div>
-                            <div className="text-center">
-                                <div className="bg-accent-gradient text-white p-4 rounded-lg">
-                                    <div className="font-script text-2xl mb-2">
-                                        Awad
-                                    </div>
-                                    <div className="font-accent">
-                                        Best Complement
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                        </section>
+                    )}
 
                 {/* Cultural Context */}
                 <section className="mb-16">
@@ -273,7 +369,7 @@ export default function Home() {
                                     Region
                                 </h3>
                                 <p className="font-body text-dark-brown">
-                                    Kerala
+                                    {culturalContext.region}
                                 </p>
                             </div>
                             <div>
@@ -281,8 +377,11 @@ export default function Home() {
                                     Traditions
                                 </h3>
                                 <ul className="font-body text-dark-brown space-y-1">
-                                    <li>Islamic wedding customs</li>
-                                    <li>Malayalam cultural elements</li>
+                                    {culturalContext.traditions.map(
+                                        (tradition, index) => (
+                                            <li key={index}>{tradition}</li>
+                                        )
+                                    )}
                                 </ul>
                             </div>
                         </div>
@@ -294,11 +393,11 @@ export default function Home() {
             <footer className="bg-primary-gradient text-white py-8 px-6 relative z-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <p className="font-accent text-lg">
-                        Dr. Ansheef Ali & Ms. Abeer Ali
+                        {coupleInformation.groom.fullName} &{" "}
+                        {coupleInformation.bride.fullName}
                     </p>
                     <p className="font-body text-sm opacity-80 mt-2">
-                        Wedding Invitation • Mela Auditorium, Muvattupuzha,
-                        Kerala
+                        Wedding Invitation • {venue.address.fullAddress}
                     </p>
                 </div>
             </footer>
